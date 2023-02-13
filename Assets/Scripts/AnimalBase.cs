@@ -5,6 +5,7 @@ public abstract class AnimalBase : MonoBehaviour
     private float _jumpForce;
     private Rigidbody _rb;
 
+
     // protected - модификатор доступа. К нему имеют доступ потомки класса
     // float jumpForce, Rigidbody rb - параметры фукнции (метода)
     // void - функция (метод) ничего не возвращает
@@ -18,5 +19,11 @@ public abstract class AnimalBase : MonoBehaviour
     {
         print("Jump!");
         _rb.AddForce(Vector3.up * _jumpForce);
+    }
+
+    protected void SetColor(Color color)
+    {
+        Material material = GetComponent<Renderer>().material;
+        material.color = color;
     }
 }

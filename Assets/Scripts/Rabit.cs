@@ -7,6 +7,7 @@ public class Rabit : AnimalBase
     [SerializeField] private Rigidbody _rbRabit;
     private void Start()
     {
+        SetColor(Color.gray);
         Init(_jumpRabit, _rbRabit);
         // Init(jumpForce: _jumpRabit, rb: _rbRabit);
         // Init(rb: _rbRabit, jumpForce: _jumpRabit);
