@@ -9,7 +9,7 @@ public class Fox : AnimalBase
     private void Start()
     {
         Init(_jumpFox, _rbFox);
-        SetColor(Color.red);
+        SetColor(new Color(1f, 0.61f, 0.28f));
     }
 
     private void Update()

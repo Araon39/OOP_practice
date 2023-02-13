@@ -21,7 +21,7 @@ public abstract class AnimalBase : MonoBehaviour
         _rb.AddForce(Vector3.up * _jumpForce);
     }
 
-    protected void SetColor(Color color)
+    protected void SetColor(Color color) //принимаем цвет типа цвет от наших потомков
     {
         Material material = GetComponent<Renderer>().material;
         material.color = color;
