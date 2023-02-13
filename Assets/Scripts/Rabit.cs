@@ -1,12 +1,16 @@
-using System;
 using UnityEngine;
+using TMPro;
 
 public class Rabit : AnimalBase
 {
     [SerializeField] private float _jumpRabit;
     [SerializeField] private Rigidbody _rbRabit;
+
     private void Start()
     {
+        AgeAnimal = 1;
+        HeightAnimal = 0.5f;
+        NameAnimal = "Rabit";
         Init(_jumpRabit, _rbRabit);
         // Init(jumpForce: _jumpRabit, rb: _rbRabit);
         // Init(rb: _rbRabit, jumpForce: _jumpRabit);
@@ -19,6 +23,5 @@ public class Rabit : AnimalBase
         {
             Jump();
         }
-        
     }
 }

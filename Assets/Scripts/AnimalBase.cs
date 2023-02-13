@@ -1,10 +1,46 @@
+using TMPro;
 using UnityEngine;
 
 public abstract class AnimalBase : MonoBehaviour
 {
+    [SerializeField] private TMP_Text _text;
+
+    private int _ageAnimal;
+    private float _heightAnimal;
     private float _jumpForce;
+
+    private string _nameAnimal;
     private Rigidbody _rb;
 
+    protected int AgeAnimal
+    {
+        get => _ageAnimal;
+        set
+        {
+            _ageAnimal = value;
+            _text.text = $"Возраст {AgeAnimal}\nИмя {NameAnimal}\nВысота {HeightAnimal}";
+        }
+    }
+
+    protected string NameAnimal
+    {
+        get => _nameAnimal;
+        set
+        {
+            _nameAnimal = value;
+            _text.text = $"Возраст {AgeAnimal}\nИмя {NameAnimal}\nВысота {HeightAnimal}";
+        }
+    }
+
+    protected float HeightAnimal
+    {
+        get => _heightAnimal;
+        set
+        {
+            _heightAnimal = value;
+            _text.text = $"Возраст {AgeAnimal}\nИмя {NameAnimal}\nВысота {HeightAnimal}";
+        }
+    }
 
     // protected - модификатор доступа. К нему имеют доступ потомки класса
     // float jumpForce, Rigidbody rb - параметры фукнции (метода)
