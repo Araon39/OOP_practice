@@ -3,9 +3,10 @@ using UnityEngine;
 
 public abstract class AnimalBase : MonoBehaviour
 {
+    //создаем переменые:
     [SerializeField] private TMP_Text _text;
 
-    private int _ageAnimal;
+    private int _ageAnimal;         //возраст животного
     private float _heightAnimal;
     private float _jumpForce;
 
